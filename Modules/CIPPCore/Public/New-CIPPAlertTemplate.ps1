@@ -244,7 +244,7 @@ function New-CIPPAlertTemplate {
                 $AfterButtonText = '<p>If this is incorrect, use the user management screen to block the user and revoke the sessions</p>'
             }
             default {
-                $Title = 'A custom alert has occured'
+                $Title = 'A custom alert has occurred'
                 $Table = ($data | ConvertTo-Html -Fragment -As List | Out-String).Replace('<table>', ' <table class="table-modern">')
                 $IntroText = "<p>You have setup CIPP to send you a custom alert for the audit events that follow this filter: $($data.cippclause) </p>$Table"
                 if ($ActionResults) { $IntroText = $IntroText + "<p>Based on the rule, the following actions have been taken: $($ActionResults -join '<br/>' )</p>" }

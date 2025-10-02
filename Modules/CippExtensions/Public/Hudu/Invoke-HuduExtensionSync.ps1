@@ -684,7 +684,7 @@ function Invoke-HuduExtensionSync {
                         'Options'           = "<a target=`"_blank`" href=https://entra.microsoft.com/$($Tenant.defaultDomainName)/#blade/Microsoft_AAD_IAM/UserDetailsMenuBlade/Profile/userId/$($user.id)>Azure AD</a> | <a <a target=`"_blank`" href=https://admin.microsoft.com/Partner/BeginClientSession.aspx?CTID=$($customer.CustomerContextId)&CSDEST=o365admincenter/Adminportal/Home#/users/:/UserDetails/$($user.id)>M365 Admin</a>"
                     }
                 } catch {
-                    $CompanyResult.Errors.add("User $($User.userPrincipalName): A fatal error occured while processing user $_")
+                    $CompanyResult.Errors.add("User $($User.userPrincipalName): A fatal error occurred while processing user $_")
                 }
             }
 
@@ -872,7 +872,7 @@ function Invoke-HuduExtensionSync {
                     }
                 }
             } catch {
-                $CompanyResult.Errors.add("Device $($device.deviceName): A Fatal Error occured while processing the device $_")
+                $CompanyResult.Errors.add("Device $($device.deviceName): A Fatal Error occurred while processing the device $_")
             }
 
         }
@@ -931,8 +931,8 @@ function Invoke-HuduExtensionSync {
         Write-LogMessage -tenant $Tenant.defaultDomainName -tenantid $Tenant.customerId -API 'Hudu Sync' -message 'Company: Completed Sync' -level 'Information'
         $CompanyResult.Logs.Add('Hudu Sync Completed')
     } catch {
-        $CompanyResult.Errors.add("Company: A fatal error occured: $_")
-        Write-LogMessage -tenant $Tenant.defaultDomainName -tenantid $Tenant.customerId -API 'Hudu Sync' -message "Company: A fatal error occured: $_" -level 'Error'
+        $CompanyResult.Errors.add("Company: A fatal error occurred: $_")
+        Write-LogMessage -tenant $Tenant.defaultDomainName -tenantid $Tenant.customerId -API 'Hudu Sync' -message "Company: A fatal error occurred: $_" -level 'Error'
     }
     return $CompanyResult
 }
