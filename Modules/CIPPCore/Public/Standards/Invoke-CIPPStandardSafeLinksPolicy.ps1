@@ -7,8 +7,8 @@ function Invoke-CIPPStandardSafeLinksPolicy {
     .SYNOPSIS
         (Label) Default Safe Links Policy
     .DESCRIPTION
-        (Helptext) This creates a Safe Links policy that automatically scans, tracks, and and enables safe links for Email, Office, and Teams for both external and internal senders
-        (DocsDescription) This creates a Safe Links policy that automatically scans, tracks, and and enables safe links for Email, Office, and Teams for both external and internal senders
+        (Helptext) This creates a Safe Links policy that automatically scans, tracks, and enables safe links for Email, Office, and Teams for both external and internal senders
+        (DocsDescription) This creates a Safe Links policy that automatically scans, tracks, and enables safe links for Email, Office, and Teams for both external and internal senders
     .NOTES
         CAT
             Defender Standards

@@ -98,7 +98,7 @@ function New-CIPPGraphSubscription {
                 }
 
                 $GraphRequest = New-GraphPostRequest -uri 'https://graph.microsoft.com/beta/subscriptions' -tenantid $TenantFilter -type POST -body $params -verbose
-                #If creation is succesfull, we store the GUID in the storage table webhookTable to make sure we can check against this later on.
+                #If creation is successful, we store the GUID in the storage table webhookTable to make sure we can check against this later on.
                 #We store the GUID as rowkey, the event type, the resource, and the expiration date as properties, we also add the Tenant name so we can easily find this later on.
                 #We don't store the return, because Ms decided that a renewal or re-authenticate does not change the url, but does change the id...
                 $WebhookRow = @{

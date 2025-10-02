@@ -109,7 +109,7 @@ function Push-UploadApplication {
                     $CommitStateReq = New-graphGetRequest -Uri "$($BaseURI)/$($NewApp.id)/microsoft.graph.win32lobapp/contentVersions/1/files/$($ContentReq.id)" -tenantid $tenant
                     Write-Host "Commit State Request: $($CommitStateReq | ConvertTo-Json -Depth 10)"
                     if ($CommitStateReq.uploadState -like '*fail*') {
-                        Write-LogMessage -api 'AppUpload' -tenant $tenant -message "$($ChocoApp.Applicationname) Commit failed. Please check if app uploaded succesful" -Sev 'Warning'
+                        Write-LogMessage -api 'AppUpload' -tenant $tenant -message "$($ChocoApp.Applicationname) Commit failed. Please check if app uploaded successfully" -Sev 'Warning'
                         break
                     }
                     Start-Sleep -Milliseconds 300
