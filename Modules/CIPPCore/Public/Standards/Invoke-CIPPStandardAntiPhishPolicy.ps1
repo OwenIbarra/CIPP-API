@@ -17,7 +17,7 @@ function Invoke-CIPPStandardAntiPhishPolicy {
             "mdo_safeattachments"
             "mdo_highconfidencespamaction"
             "mdo_highconfidencephishaction"
-            "mdo_phisspamacation"
+            "mdo_phishspamaction"
             "mdo_spam_notifications_only_for_admins"
             "mdo_antiphishingpolicies"
             "mdo_phishthresholdlevel"
